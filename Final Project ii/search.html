@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function(){
+				$("div").animate({left: '250px'});
+			});
+		});
+	</script>
+</head>
+<body>
+<button>Start animation</button>
+<p>By default, LL HTML elements have a static postion, and cannot be moved. To manipulate the postion, remember to first set the CSS position property of the relative, fixed or absolute!</p>
+<div style="background: #98bf21;height: 100px;position: absolute;"></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Form Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial;
+    }
+    .form-container {
+      width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+  </style>
+    <script>
+        $(document).ready(function() {
+            $("#submitBtn").click(function(event) {
+                event.preventDefault(); // Prevents form submission from refreshing the page
+                var name = $("#name").val();
+                var email = $("#email").val();
+                
+                if (name && email) { // Ensure the fields aren't empty
+                    alert("Form submitted!\nName: " + name + "\nEmail: " + email);
+                    window.location.href = "index.html"; // Redirects to home page after clicking OK
+                } else {
+                    alert("Please fill out all fields before submitting.");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Redeem"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="redeem@email.com"><br><br>
+        
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+</body>
+</html>
+
+</script>
+
+</body>
+</html>
